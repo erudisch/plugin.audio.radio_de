@@ -183,6 +183,7 @@ def get_stream_url(station_id):
         station = radio_api.get_station_by_station_id(station_id)
         stream_url = station['stream_url']
     __log('get_stream_url result: %s' % stream_url)
+    xbmc.sleep(1000)
     return plugin.set_resolved_url(stream_url)
 
 
